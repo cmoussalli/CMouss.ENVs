@@ -26,26 +26,26 @@ namespace CMoussENVsTester
     [TestClass]
     public sealed class Test1
     {
-        //[TestMethod]
-        //public void TestBaseFileOnly()
-        //{
-        //    ENVManager.UseEnvironment("CMouss_ENVsTest");
-        //    string value1 = ENVManager.GetValue("Param1");
+        [TestMethod]
+        public void TestBaseFileOnly()
+        {
+            ENVManager.UseEnvironment("CMouss_ENVsTest");
+            string value1 = ENVManager.GetValue("Param1");
 
-        //    Assert.AreEqual(value1, "Value1");
+            Assert.AreEqual(value1, "Value1");
 
-        //}
+        }
 
 
-        //[TestMethod]
-        //public void TestBaseWithExtendedFile_ValueUpdated()
-        //{
-        //    ENVManager.UseEnvironment("CMouss_ENVsTest", "Staging");
-        //    string value1 = ENVManager.GetValue("Param1");
+        [TestMethod]
+        public void TestBaseWithExtendedFile_ValueUpdated()
+        {
+            ENVManager.UseEnvironment("CMouss_ENVsTest", "Staging");
+            string value1 = ENVManager.GetValue("Param1");
 
-        //    Assert.AreEqual(value1, "Value1 Updated");
+            Assert.AreEqual(value1, "Value1 Updated");
 
-        //}
+        }
 
 
         [TestMethod]
