@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36603.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMouss.ENVs", "CMouss.ENVs\CMouss.ENVs.csproj", "{983C1249-391D-40D1-8C3A-416017FB1C9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMoussENVsTester", "CMoussENVsTester\CMoussENVsTester.csproj", "{03B69793-5BC8-4F3F-A18C-B0A0EDB9626C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{983C1249-391D-40D1-8C3A-416017FB1C9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{983C1249-391D-40D1-8C3A-416017FB1C9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{983C1249-391D-40D1-8C3A-416017FB1C9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{983C1249-391D-40D1-8C3A-416017FB1C9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03B69793-5BC8-4F3F-A18C-B0A0EDB9626C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03B69793-5BC8-4F3F-A18C-B0A0EDB9626C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03B69793-5BC8-4F3F-A18C-B0A0EDB9626C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03B69793-5BC8-4F3F-A18C-B0A0EDB9626C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {08213488-452C-4A78-BA52-0E4C61D87794}
+	EndGlobalSection
+EndGlobal
