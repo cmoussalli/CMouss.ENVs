@@ -59,6 +59,68 @@ namespace CMoussENVsTester
         }
 
 
+        [TestMethod]
+        public void TestNonExistsApp()
+        {
+            string ENVsPath = @"C:\ENVs";
+            string appName = "FakeApp1";
+            string paramName = "FakeParam";
+            if (!System.IO.Directory.Exists(ENVsPath))
+            {
+                System.IO.Directory.CreateDirectory(ENVsPath);
+            }
+            Thread.Sleep(200);
+            if (System.IO.Directory.Exists(ENVsPath + @"\" + appName))
+            {
+                System.IO.Directory.Delete(ENVsPath + @"\" + appName);
+            }
+            Thread.Sleep(200);
+
+            try
+            {
+                ENVManager.UseEnvironment(appName);
+                string value1 = ENVManager.GetValue(paramName);
+                Assert.IsTrue(false, "Expected exception was not thrown.");
+            }
+            catch (Exception ex)
+            {
+                Assert.IsTrue(ex.Message == @"Environment directory not found: " + ENVsPath + @"\" + appName);
+            }
+        }
+
+
+        [TestMethod]
+        public void TestNonExistsParam()
+        {
+            string ENVsPath = @"C:\ENVs";
+            string appName = "FakeApp3";
+            string paramName = "FakeParam";
+            if (!System.IO.Directory.Exists(ENVsPath))
+            {
+                System.IO.Directory.CreateDirectory(ENVsPath);
+            }
+            Thread.Sleep(200);
+            if (!System.IO.Directory.Exists(ENVsPath + @"\" + appName))
+            {
+                System.IO.Directory.CreateDirectory(ENVsPath + @"\" + appName);
+            }
+            Thread.Sleep(200);
+
+            try
+            {
+                ENVManager.UseEnvironment(appName);
+                string value1 = ENVManager.GetValue(paramName);
+
+            }
+            catch (Exception ex) //Parameter 'FakeParam' not found in environment variables
+            {
+                Assert.IsTrue(ex.Message == @"Parameter '" + paramName + "' not found in environment variables.");
+            }
+
+
+
+        }
+
 
     }
 }
